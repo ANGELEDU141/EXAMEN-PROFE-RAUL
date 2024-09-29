@@ -1,14 +1,16 @@
 package senati.pe.repository;
 
-import java.util.Collection;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import senati.pe.entity.Customer;
 
-public interface CustomerRepository {
-    public abstract void insert(Customer customer);
-    public abstract void update(Customer customer);
-    public abstract void delete(Integer customerId);
-    public abstract void deleteAll();
-    public abstract Customer findById(Integer customerId);
-    public abstract Collection<Customer> findAll();
+
+@Repository
+public interface CustomerRepository  extends JpaRepository<Customer, Integer> {
+
+
 }
+
+   
+     
