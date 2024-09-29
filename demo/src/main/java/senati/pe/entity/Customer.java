@@ -4,18 +4,57 @@ import java.time.LocalDate;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-public class Customer {
-    private Integer customerId;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.io.Serializable;
+
+
+@Entity
+@Table(name = "customers")
+public class Customer implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+ 
+    
+
+
+    @Id
+    @GeneratedValue( strategy = javax.persistence.GenerationType.IDENTITY )
+    private Integer customerId; // Columna primaria autoincremental por defecto en la base de datos MySQL
+
+    // Columnas
+     @Column(name = "first_name")
     private String firstName;
+
+    @Column(name = "last_name")
     private String lastName;
+
+    @Column(name = "company")
     private String company;
+
+    @Column(name = "address")
     private String address;
+
+    @Column(name = "city")
     private String city;
+
+    @Column(name = "state")
     private String state;
+
+    @Column(name = "country")
     private String country;
+
+    @Column(name = "phone")
     private String phone;
+
+    @Column(name = "email")
     private String email;
     
+
+
     @DateTimeFormat(pattern = "yyyy-MM-dd", iso = DateTimeFormat.ISO.DATE)
     private LocalDate hireDate;
 
