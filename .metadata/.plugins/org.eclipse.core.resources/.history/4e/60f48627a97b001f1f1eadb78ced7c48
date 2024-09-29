@@ -1,0 +1,5 @@
+package senati.pe.repository;
+
+public class CustomerRepositorylmpl {
+
+}

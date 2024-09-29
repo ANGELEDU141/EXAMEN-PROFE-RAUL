@@ -1,0 +1,5 @@
+package senati.pe.entity;
+
+public class Customer {
+
+}

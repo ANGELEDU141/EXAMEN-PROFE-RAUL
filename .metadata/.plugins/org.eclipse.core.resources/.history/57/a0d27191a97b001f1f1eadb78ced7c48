@@ -1,0 +1,5 @@
+package senati.pe.controller;
+
+public class HomeController {
+
+}
